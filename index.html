@@ -3,50 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Angalia Ujumbe - Dee Boy Pro</title>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #e0f2f1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .container {
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-      text-align: center;
-      width: 90%;
-      max-width: 400px;
-    }
-    h2 {
-      color: #004d40;
-      margin-bottom: 30px;
-    }
-    p {
-      font-size: 18px;
-      color: #00796b;
-      padding: 15px;
-      border: 1px solid #b2dfdb;
-      border-radius: 10px;
-      background: #e0f7fa;
-      min-height: 50px;
-      transition: 0.3s;
-    }
-  </style>
+  <title>Angalia Ujumbe</title>
 </head>
 <body>
-  <div class="container">
-    <h2>Ujumbe wa Hivi Sasa</h2>
-    <p id="msg">⏳ Inasubiri ujumbe...</p>
-  </div>
+  <h2>Ujumbe wa Hivi Sasa</h2>
+  <p id="msg">⏳ Inasubiri ujumbe...</p>
 
-  <script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+    import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-database.js";
+
     const firebaseConfig = {
       apiKey: "AIzaSyA-q_C5ueXQ_6BkNcN3dOzQRywzscOqDa0",
       authDomain: "mnubimnubi-d4e90.firebaseapp.com",
@@ -58,11 +24,12 @@
       measurementId: "G-DG0XHYCT17"
     };
 
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.database();
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
 
-    db.ref("ujumbe").on("value", (snapshot) => {
-      document.getElementById("msg").innerText = snapshot.val();
+    const msgEl = document.getElementById("msg");
+    onValue(ref(db, 'ujumbe'), (snapshot) => {
+      msgEl.innerText = snapshot.val();
     });
   </script>
 </body>
