@@ -1,50 +1,72 @@
-<DOCTYPE html>
-    <html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
-  <title>Mbebed Mnubi Mnuby</title>
-  <meta name="description" content="Official website of Dee Boy, a tech student and future IT legend.">
-  <meta name="keywords" content="Dee Boy, Said Mohamed Abdalah, GitHub Pages, IT Legend, Student Website, Mbebed Mnuby Mnuby">
-  <meta name="author" content="Said Mohamed Abdalah">
-
-        <style>
-summary{color: rgb(255, 0, 0);
-      top:0px;
-      left: 0px;
-      margin-bottom:10px;
-      font-size: 20px;
-      width: 100px;
-      border-radius: 50px;
-      background-color: aqua;
-}
-
-a:link{color: aliceblue;text-decoration: none;}
-a:visited{color: aqua}
-li{padding-left: 10px;
-    padding-top: 10;
-    border: 0.5px solid yellow;
-    background-color: blue;
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angalia Ujumbe - Dee Boy Pro</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #e0f2f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
-
-iframe{height: 30%;
-      position: -ms-page;
-      border: 8px  rgb(9, 0, 255);
-      color: rgb(0, 255, 34);
-      position:absolut;
-      top: 80%;
-border-style:ridge;
-      right:1;
-       width: 60%;
-       border-radius: 20px 70px 30px 30px;
-
-
-}
-
-nav{background-color:rgb(255, 0, 0);
+    .container {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
       text-align: center;
-      color: crimson;
-      position: fixed;
-      top:0;
+      width: 90%;
+      max-width: 400px;
+    }
+    h2 {
+      color: #004d40;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 18px;
+      color: #00796b;
+      padding: 15px;
+      border: 1px solid #b2dfdb;
+      border-radius: 10px;
+      background: #e0f7fa;
+      min-height: 50px;
+      transition: 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Ujumbe wa Hivi Sasa</h2>
+    <p id="msg">⏳ Inasubiri ujumbe...</p>
+  </div>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyA-q_C5ueXQ_6BkNcN3dOzQRywzscOqDa0",
+      authDomain: "mnubimnubi-d4e90.firebaseapp.com",
+      databaseURL: "https://mnubimnubi-d4e90-default-rtdb.firebaseio.com",
+      projectId: "mnubimnubi-d4e90",
+      storageBucket: "mnubimnubi-d4e90.firebasestorage.app",
+      messagingSenderId: "317773748314",
+      appId: "1:317773748314:web:2de72a9f8048bb043c2063",
+      measurementId: "G-DG0XHYCT17"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    db.ref("ujumbe").on("value", (snapshot) => {
+      document.getElementById("msg").innerText = snapshot.val();
+    });
+  </script>
+</body>
+</html>      top:0;
       padding: 30px;
       width: 100%;
       height: auto;
@@ -139,3 +161,4 @@ summary::marker{content: none;}
 
 
     </html>
+
