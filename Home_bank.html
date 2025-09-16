@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="my_bank_Js/pre-login.js"></script>
+        <script src="my_bank_Js/WiTHDRAW.js"></script>
+        <script src="my_bank_Js/SEND_MONEY.js"></script>
+        <script src="my_bank_Js/CHANGE_PASSWORD.js"></script>
+        <script src="my_bank_Js/BACKGROUND_ALL.js"></script>
+        <script src="my_bank_Js/MY_CARD.js"></script>
+        <script src="my_bank_Js/SMS_UJUMBE.js"></script>
+        <script src="my_bank_Js/NEW_ACCOUNT.js"></script>
+        <script src="my_bank_Js/My_bank.js"></script>
+        <link href="Style_bank.css" rel="stylesheet">
+        <link href="S" rel="stylesheet">
+
+    </head>
+
+    
+        <body>
+            <p id="VUTA" style="height: 20px;position: relative;background-color: white;"></p>
+            <section id="GET" style="background-color: white;"></section>
+
+
+            <header id="hdr"> 
+                <h1>WELCOME WANUBI BANK</h1>
+                <i><h2 class="Acc_Name" id="MGT">SAID MNUBI</h2>
+                <h2 class="Acc_Name" id="MOX">IBA:86543467886</h2></i>
+                <img src="Images/MYPHOTO.png" alt="my_pic" id="MTEJA">
+                <p id="SALIO" ><i>BALANCE: <span id="J55">8,563,921,976.00 TZS</span></i></p>
+            </header>
+            
+            <section id="main01" style="display: block;"></section>
+            <section id="main02" >
+
+            <label  for="tel" id="vg">CASH-OUT NUMBER</label><br>
+            <Input class="JH" type="tel" id="kkk3" maxlength="10" autocomplete="cc-number" onclick="document.getElementById('JHHG').innerHTML='Put a valid Cas-Out number'"><br>
+
+            <label  for="tel" id="vg">CASH-OUT AMOUNT</label><br>
+            <Input class="JH"  type="tel" id="zzz3" maxlength="14" autocomplete="cc-number" onclick="document.getElementById('JHHG').innerHTML='Cash-Out above 1000TZS'"> <br>
+                <i><p id="JHHG">Cash-Out Now...!</p><br></i>
+                <Input type="button" value="CANCEL"  onclick="Cancelz()" class="zsd">
+                <Input type="button" value="WITHDRAW" id="inout" onclick="TRANSFER_xp()" class="zsd">
+            </section>
+
+            <section id="BINAFSI" class="B1">
+                <a href="#VUTA">  <div class="KIDOGO1" onclick="MY_A()">MY ACCOUNTS</div> </a>
+                <a href="#VUTA">  <div class="KIDOGO1" onclick="MY_B()">NEW ACCOUNT</div> </a>
+                <a href="#VUTA">  <div class="KIDOGO1" onclick="MY_C()">MY CARDS</div>    </a>
+                <a href="#VUTA">  <div class="KIDOGO1" onclick="Start()">SECURITY</div></a>
+                <div class="KIDOGO1" onclick="S_mode()">MODE2</div>
+
+            </section>
+
+            <section id="CHINI" class="B1">
+                <div class="PANA2" onclick="Valid()">INSURANCE</div>
+                <div class="PANA2" onclick="LST()">BOOKING</div>
+                <div class="PANA2">EDUCATION</div>
+                <div class="PANA2">HEALTH</div>
+            </section>
+
+<form method="dialog" autofocus="none" >
+            <div id="PAISHA" >
+            <h3 style="display: none;" id="Y3">MUAMALA</h3>
+            <section id="NEWX"></section>
+            <section id="NEW2"></section>
+
+            <h3 id="pro1" style="display: none;">CHANGE YOUR PASSWORD</h3>
+            <section id="SECURITY_PRO" class="M8" style="display: none;">
+                <form autocomplete="on" action="double.js">
+            <div id="TRUE3">
+                <span id="FMX">
+             <label class="v08" for="password_pro">ENTER NEW PASSWORD</label><br>
+             <input type="tel" id="userz" autocomplete="tel" style="display: none;">
+             <input type="password" name="password_pro" id="P_pro" maxlength="14" onclick="document.getElementById('ATTEMPT').innerHTML='Match your password'"><br>
+             <label class="v08" for="password_pro2">CORMFM NEW PASSWORD</label><br>
+             <input type="password" name="password_pro" id="P_pro2" maxlength="14" onclick="document.getElementById('ATTEMPT').innerHTML='Match your password'"><br>
+             <p id="ATTEMPT">Create New password now..</p>
+             <input type="submit" id="Fire" value="CHANGE" onclick="Change8()" ><br>
+             
+                </span>
+            </div>
+            <p id="nyoka" style="display: none;"><i>✅Password changed<br> succesifully.<br>Preview and keep it secret..</i></p>
+            <p id="SOKO3" class="SK3">***********</p>
+            <input type="button" id="SOKO4" class="SK3" value="PREVIEW" onclick="prevx()">
+            <input type="button" value="FINISH" id="PLY" class="SK3" onclick="End()" type="reset">
+            </form>
+            </section>
+
+
+            <h3 id="Y5">RECENT TRANSACTIONS</h3>
+               <a href="#VUTA">
+                <section id="MIAMALA" class="M1">
+                    karibu  sana
+                </section></a>
+
+                
+                <h3 id="WVM" style="display: none;">TRANSIFER MONEY TO...</h3>
+                <section id="MATAWI" class="M6" style="display: none">
+                    <h4 onclick="WB1()" id="XV1" style="background-color:  rgb(0, 0, 135);color: white;">WANUBI ACCOUNT</h4>
+                    <h4 onclick="WB2()" id="XV2">PHONE NETWORKS</h4>
+                    <h4 onclick="WB3()" id="XV3">WITHDRAW AGENCY</h4>
+                    <h4 onclick="WB4()" id="XV4">OTHER BANKS</h4>
+                <span id="hiden" style="display: none;">000000</span>
+                <section id="MATAWIx" class="M7">
+                    <h5 id="NONz">ENTER WANUBI ACCOUNT NUMBER:</h5>
+                    <input type="text" id="MYM1" maxlength="14" placeholder="98567934797546" onclick="document.getElementById('NOTICE01').innerHTML='Put Valid Account Number....'">
+                    <h5>AMOUNT ON TRANSFER:</h5>
+                    <input type="number" id="MYT1" maxlength="14" placeholder="TZS..."   onclick="document.getElementById('NOTICE01').innerHTML='Put Amount to send....'"><br><br>
+                    <input type="button" value="SEND" style="color: black;font-family: stencil;" onclick="TRANSFER_1()" id="HC">
+                    <p id="NOTICE01">Fill deatails to send money...!</p>
+                </section>
+
+                    
+                    <section id="MATAWI2" class="M7" style="display: none;">
+                    <h5 id="NONz">ENTER PHONE NUMBER:</h5>
+                    <input type="tel" id="MYM2" maxlength="10" placeholder="0756297889" onclick="document.getElementById('NOTICE02').innerHTML='Put Valid Pone Number....'" autocomplete="tel" required>
+                    <h5>AMOUNT ON TRANSFER:</h5>
+                    <input type="tel" id="MYT2" maxlength="14" placeholder="TZS..." onclick="document.getElementById('NOTICE02').innerHTML='Put Amount to send....'" autocomplete="tel" required><br><br>
+                    <input type="button" value="SEND" style="color: black;font-family: stencil;" onclick="TRANSFER_2()" id="HC">
+                    <span id="NOTICE02">Fill deatails to send money...!</span>
+                </section>
+
+                <section id="MATAWI3" class="M7" style="display: none;">
+                    <h5 id="NONz">ENTER AGENT NUMBER:</h5>
+                    <input type="text" id="MYM3" maxlength="10" placeholder="297889" onclick="document.getElementById('NOTICE03').innerHTML='Put Valid Agent Number six digits....'">
+                    <h5>AMOUNT ON TRANSFER:</h5>
+                    <input type="tel" id="MYT3" maxlength="14" placeholder="TZS..." onclick="document.getElementById('NOTICE03').innerHTML='Put Amount to send....'" autocomplete="tel" required><br><br>
+                    <input type="button" value="SEND" style="color: black;font-family: stencil;" onclick="TRANSFER_3()" id="HC">
+                    <span id="NOTICE03">Fill deatails to send money...!</span>
+                </section>
+
+                <section id="MATAWI4" class="M7" style="display: none;">
+                    <h5 id="NONz">ENTER OTHER BANK ACCOUNT NUMBER:</h5>
+                    <input type="text" id="MYM4" maxlength="14" placeholder="98567934797546" onclick="document.getElementById('NOTICE04').innerHTML='Put Valid Account Number....'">
+                    <h5>AMOUNT ON TRANSFER:</h5>
+                    <input type="tel" id="MYT4" maxlength="14" placeholder="TZS..."  onclick="document.getElementById('NOTICE04').innerHTML='Put Amount to send....'" autocomplete="tel" required><br><br>
+                    <input type="button" value="SEND" style="color: black;font-family: stencil;" onclick="TRANSFER_4()" id="HC">
+                    <span id="NOTICE04">Fill deatails to send money...!</span>
+                </section>
+
+                </section>
+                
+                <section id="MZS" class="Mx"></section>
+
+
+                <h3>FINANCE SERVICES</h3>
+                <section id="HUDUMA" class="M2">
+                <a href="#MIAMALA">
+                <div class="LAINI1" id="LAINIU" onclick="DUDU()" >
+                <img id="tumap" src="Images/TUMAPESA.png" ><span id="SYM"><i>SEND MONEY</i></span>
+                </div></a>
+
+                <div class="LAINI1" id="LAINIV" onclick="wdm()"><img id="toap" src="Images/TOAPESA.png" ><span id="WDM"><i>WITHDRAW</i></span></div>
+                <div class="LAINI1" id="LAINIW"><img id="lipb" src="Images/BIlI.png" ><span id="BILL1"><i>PAY BILLS</i></span></div> 
+                <div class="NGUMU2" id="UX"><img id="loan" src="Images/MIKOPO.png" ><span id="MKP"><i>LOANS</i></span></div>
+                <div class="NGUMU2" id="UV"><img id="atm" src="Images/ATM1.png" ><span id="ATM2"><i>ATM</i></span></div>
+            </section>
+
+
+             <h3 id="Y3" style="display: none;">CREATE NEW ACCOUNT</h3>
+             <h3 id="Y6" style="display: none;">CREATE NAW ACCOUNT</h3>
+             
+            <section id="MIAMALAX1" class="M3" style="display: none;">
+                <form autocomplete="on" id="form15" method="dialog">
+                     <lebel id="LEBEL2">ACCOUNT TYPE</lebel><br>
+                     <select id="BUSINESS4" name="TYPE4" >
+                             <option value="2">NONE</option>
+                             <option value="LOCAL BUSINESS (LBA)">LOCAL BUSINESS</option>
+                             <option value="INTERNATIONAL BUSINESS (IBA)">INTERNATIONAL BUSINESS</option>
+                             <option value="VIP ACCOUNT (VIP)">VIP ACCOUNT</option>
+                             <option value="STUDENT ACCOUNT (STA)">STUDENT ACCOUNT</option>
+                             <option value="ORGANIZATION ACCOUNT (ORG)">ORGANIZATION ACCOUNT</option>
+                     </select><br><br>
+       <lebel id="LEBEL4">REGISTRATION AREA</lebel><br>
+      <select id="MALE" name="county" >
+         <option value="1">NONE</option>
+         <option value="DAR ES SALAAM">DAR-ES-SALAAM</option>
+         <option value="MWANZA">MWANZA</option>
+         <option value="ZANZIBAR">ZANZIBAR</option>
+         <option value="DODOMA">DODOMA</option>
+         <option value="MOROGORO">MOROGORO</option>
+         <option value="MBEYA">MBEYA</option>
+         <option value="ARUSHA">ARUSHA</option>
+         <option value="TANGA">TANGA</option>
+         <option value="MTWARA">MTWARA</option>
+         <option value="MANYARA">MANYARA</option>
+         <option value="KIGOMA">KIGOMA</option>
+         <option value="MOSHI">MOSHI</option>
+         <option value="SINGIDA">SINGIDA</option>
+         <option value="GEITA">GEITA</option>
+
+      </select><br><br>
+                     <lebel id="LEBEL1" >CUSTOMER FULL NAME</lebel><br>
+                      <input type="text" id="FullName" placeholder="SAID MNUBY" maxlength="20" autocomplete="cc-name"><br><br>
+
+                      <lebel id="LEBEL5" >PHONE NUMBER</lebel><br>
+                      <input type="text" id="PHONE" placeholder="0756986567" maxlength="10" required autocomplete="tel"><br><br>
+
+                       
+
+                      <lebel id="LEBEL3" for="password" value="">ENTER PASWORD</lebel><br>
+
+                       <input type="tel" id="usery" autocomplete="tel" style="display: none;">
+                      <input type="password" id="PWord"  maxlength="14" required onclick="document.getElementById('STATUS').innerHTML='match your passwords'"><br><br>
+
+                      <lebel id="LEBEL6" for="password" >CORMFM PASWORD</lebel><br>
+                      <input type="password" id="C_Word"  maxlength="14" onclick="document.getElementById('STATUS').innerHTML='match your passwords'"><br>
+                       
+                      <p id="STATUS"></p>
+                      <p id="STATUS2">✅Well done !!, you have created an account succesifully!!</p>
+                      <input type="submit" id="BFT" class="aaa1" onclick="DEE()" value="SUBMIT" >
+                      <input type="reset" id="reset1" class="aaa2">
+                      <input type="submit" id="ZTX" class="aaa3" onclick="fnh()" value="FINISH">
+                      
+                      
+                </form>
+            </section>
+
+                    
+                      <h3 id="Y8">ACCOUNT DETAILS</h3>
+                     <section id="GA">
+                      <p id="CHOKO">ACCOUNT TYPE:.............................. <span id="TYPX" class="TAMU">INTERNATIONAL BUSINESS (IBA)</span></p>
+                      <p id="CHOKO">CUSTOMER:........................................ <span id="CDA" class="TAMU">SAID MNUBI</span></p>
+                      <p id="CHOKO">ACCOUNT NO:................................... <span id="GBH" class="TAMU">IBU763214795</span></p>
+                      <p id="CHOKO">MAIN BRANCHI:................................ <span id="RLZ" class="TAMU">MANYARA</span></p>
+                      <p id="CHOKO">PHONE NO:.......................................... <span id="POG" class="TAMU">0653541738</span></p>
+                      <p id="CHOKO">BALANCE:........................................... <span class="TAMU" id="FULLx">8,657,567 /=</span></p>
+                     </section>
+             <p  style="display: none;"><span id="CPU">55764389</span></p>
+             <h3 id="Y1" style="display: none;">YOUR MASTER-CAD</h3>
+            <div id="WanubiCard">
+                <button type="button" class="MODE8" id="D44" onclick="D4()">CYAN&GREEN</button>
+                <button type="button" class="MODE8" id="D55" onclick="D5()">ORANGE</button>
+                <button type="button" class="MODE8" id="D66" onclick="DM_Z()">BLUE</button>
+                <button type="button" class="MODE8" id="D77" onclick="D7()">DEFAULT</button>
+                <button type="button" id="PRINT1" onclick="window.print() ">PRINT</button>
+
+
+            <div class="BBB" id="I1x"></div>
+            <div class="BBB" Id="I2x"></div>
+            <div class="BBB" Id="I3x"></div>
+            <img id="QR1x" src="Images/QR-1.png" height="100" width="100">
+            <img id="SM1x" src="Images/SIM-1.png" height="55" width="85">
+            <p id="FACTx">WANUBI BANK</p>
+                <span id="NAME4">SAID MNUBY<br></span>
+                <span id="NUM1x">IBA86543212457</span>
+                <span id="SECRETx">
+                    <span style="color: red;font-weight: 900;">
+                        #WB:</span>5432 4324 1192 4409
+                </span>
+                <span id="DATEx"><span style="color: red;font-weight: 900;">EXP AFTER :</span> 06/2025</span>
+                <p id="COUNTRY4x">MANYARA</p>
+        </div>
+            <h3>ACCOUNT SERVICES </h3>
+            <section id="BINAFSIm" class="B1">
+                <a href="#VUTA">  <div class="KIDOGO1" onclick="MY_A()">MY ACCOUNTS</div> </a>
+                <a href="#VUTA">  <div class="KIDOGO1" onclick="MY_B()">NEW ACCOUNT</div> </a>
+                <a href="#VUTA">  <div class="KIDOGO1" onclick="MY_C()">MY CARDS</div>    </a>
+                <a href="#VUTA">  <div class="KIDOGO1" onclick="Start()">SECURITY</div></a>
+                <div class="KIDOGO1" onclick="S_mode()">MODE2</div>
+
+            </section>
+            <h3>OTHER SERVICES</h3>
+             <section id="CHINIn" class="B1">
+                <div class="PANA2" onclick="Valid()">INSURANCE</div>
+                <div class="PANA2" onclick="LST()">BOOKING</div>
+                <div class="PANA2">EDUCATION</div>
+                <div class="PANA2">HEALTH</div>
+            </section>
+            </div>
+
+        <div id="before6">
+            <h2 id="pre8">WELCOME WANUBI BANK</h2>
+            <p id="login" class="minix" onclick="login_r()">LOGIN</p>
+            <p id="sign-in" class="minix" onclick="login_s()">SIGN-IN</p>
+            <img id="mcd" src="Images/MYPHOTO.png">
+
+            <section id="bomba" class="bmn" style="display:block;"><i>
+               
+            <h2 id="dem">ACCOUNT NUMBER</h2>
+             <input type="tel" id="supu" required autocomplete="tel" >
+             <h2 id="dem">PASSWORD</h2>
+             <input type="password" id="supu2" required >
+             <p id="umbea" ></p>
+             <input type="button" class="supu3" id="zbc" value="LOGIN" onclick="logT(event)">
+             <p id="umbea2">forgote password..??</p></i>
+                
+             </section>
+            
+
+            <section id="bombax" class="bmn">
+                                <form autocomplete="on" id="form16" method="dialog">
+                     <lebel id="LEBEL2">ACCOUNT TYPE</lebel><br>
+                     <select id="BUSINESS44" name="TYPE4" >
+                             <option value="2">NONE</option>
+                             <option value="LOCAL BUSINESS (LBA)">LOCAL BUSINESS</option>
+                             <option value="INTERNATIONAL BUSINESS (IBA)">INTERNATIONAL BUSINESS</option>
+                             <option value="VIP ACCOUNT (VIP)">VIP ACCOUNT</option>
+                             <option value="STUDENT ACCOUNT (STA)">STUDENT ACCOUNT</option>
+                             <option value="ORGANIZATION ACCOUNT (ORG)">ORGANIZATION ACCOUNT</option>
+                     </select><br><br>
+       <lebel id="LEBEL4">REGISTRATION AREA</lebel><br>
+      <select id="MALEc" name="county" >
+         <option value="1">NONE</option>
+         <option value="DAR ES SALAAM">DAR-ES-SALAAM</option>
+         <option value="MWANZA">MWANZA</option>
+         <option value="ZANZIBAR">ZANZIBAR</option>
+         <option value="DODOMA">DODOMA</option>
+         <option value="MOROGORO">MOROGORO</option>
+         <option value="MBEYA">MBEYA</option>
+         <option value="ARUSHA">ARUSHA</option>
+         <option value="TANGA">TANGA</option>
+         <option value="MTWARA">MTWARA</option>
+         <option value="MANYARA">MANYARA</option>
+         <option value="KIGOMA">KIGOMA</option>
+         <option value="MOSHI">MOSHI</option>
+         <option value="SINGIDA">SINGIDA</option>
+         <option value="GEITA">GEITA</option>
+
+      </select><br><br>
+                     <lebel id="LEBEL1" >CUSTOMER FULL NAME</lebel><br>
+                      <input type="text" id="FullNamec" placeholder="SAID MNUBY" maxlength="20" autofocus autocomplete="name"><br><br>
+
+                      <lebel id="LEBEL5" for="tel">PHONE NUMBER</lebel><br>
+                      <input type="tel" id="PHONEc" placeholder="0756986567" maxlength="10" required><br><br>
+
+                       <input type="tel" id="userx" autocomplete="tel" style="display: none;">
+
+                      <lebel id="LEBEL3" for="password" value="">ENTER PASWORD</lebel><br>
+                      <input type="password" id="PWordc"  maxlength="14" required onclick="document.getElementById('STATUS').innerHTML='match your passwords'"><br><br>
+
+                      <lebel id="LEBEL6" for="password" >CORMFM PASWORD</lebel><br>
+                      <input type="password" id="C_Wordc"  maxlength="14" onclick="document.getElementById('STATUS').innerHTML='match your passwords'"><br>
+                       
+                      <p id="STATUSc"></p>
+                      <p id="STATUS2">✅Well done !!, you have created an account succesifully!!</p>
+                      <input type="submit" id="BFT3c"  onclick="gravit()" value="SUBMIT">
+                      <input type="reset" id="reset1c"  onclick="" class="MHD">
+                      <input type="button" id="ZTXc"  onclick="fnh()" value="FINISH">
+                     
+                </form>
+            </section>
+
+            <section id="bombay" class="bmn">
+              <p>Congratulations..<br>you have new wanubi Account </p><br>
+              <p>Account No: <span id="QNM1">987538653764</span></p>
+              <p>Name: <span id="QNM2" style="text-transform: uppercase;">SAID MNUBI</span></p><br>
+             <input type="submit" onclick="login_r()" class="supu3" value="LOGIN" style="width: 15vw;margin-left: 1vw;counter-reset: none;">
+            </section>
+        </div>
+</form>
+<script>
+let MK2=localStorage.getItem('PPF');
+document.getElementById("RLZ").innerHTML=MK2;
+document.getElementById("COUNTRY4x").innerHTML=MK2;
+
+let MKY=localStorage.getItem('DVD');
+document.getElementById("hiden").innerHTML=MKY;
+
+  document.getElementById("main01").style.backdropFilter="blur(10px)";
+  document.getElementById("main01").style.display="block"
+  
+ let VBR=localStorage.getItem('XD');
+  document.getElementById("MGT").innerHTML=VBR;
+
+   let VAR=localStorage.getItem('VF');
+  document.getElementById("MOX").innerHTML=VAR;
+
+  let GGF8= localStorage.getItem('MMN8');
+  document.getElementById("J55").innerHTML=GGF8;
+
+  let SMS9= localStorage.getItem('SMS9');
+  document.getElementById("MIAMALA").innerHTML=SMS9;
+
+</script>
+     
+        </body>
+    
+</html>
+
+
+
+
+
